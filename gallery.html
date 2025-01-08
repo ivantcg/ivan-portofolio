@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .gallery-item {
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .modal-img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .category-btn {
+        margin: 5px;
+      }
+
+      .category-btn.active {
+        background-color: #0d6efd !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MyPortfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <h1 class="display-4 mb-4">My Projects</h1>
+
+      <!-- Category Filters -->
+      <div class="text-center mb-4">
+        <button
+          class="btn btn-outline-primary category-btn active"
+          data-category="all"
+        >
+          All
+        </button>
+        <button
+          class="btn btn-outline-primary category-btn"
+          data-category="web"
+        >
+          Web Development
+        </button>
+        <button
+          class="btn btn-outline-primary category-btn"
+          data-category="mobile"
+        >
+          Mobile Apps
+        </button>
+        <button
+          class="btn btn-outline-primary category-btn"
+          data-category="design"
+        >
+          UI Design
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="row" id="gallery-grid">
+        <!-- Web Development Projects -->
+        <div class="col-md-4 gallery-item" data-category="web">
+          <div class="card">
+            <img
+              src="projek1.jpg"
+              alt="E-commerce Website"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">E-commerce Website</h5>
+              <p class="card-text">
+              </p>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#projectModal"
+                data-title="E-commerce Website"
+                data-description="A complete e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard."
+                data-image="/api/placeholder/400/300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile App Projects -->
+        <div class="col-md-4 gallery-item" data-category="mobile">
+          <div class="card">
+            <img
+              src="projek2.jpg"
+              alt="Fitness App"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Fitness Tracker App</h5>
+              <p class="card-text">
+              </p>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#projectModal"
+                data-title="Fitness Tracker App"
+                data-description="A mobile fitness tracking application built with React Native. Features workout planning, progress tracking, and nutrition logging."
+                data-image="/api/placeholder/400/300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI Design Projects -->
+        <div class="col-md-4 gallery-item" data-category="design">
+          <div class="card">
+            <img
+              src="projek.jpg"
+              alt="Dashboard Design"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Admin Dashboard</h5>
+              <p class="card-text">Modern dashboard UI design</p>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#projectModal"
+                data-title="Admin Dashboard"
+                data-description="A clean and modern admin dashboard design created with Figma. Includes dark/light mode and responsive layouts."
+                data-image="/api/placeholder/400/300"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img class="modal-img mb-3" src="" alt="" />
+            <p class="modal-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; <span id="currentYear"></span> Portfolio. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // Set current year
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Category filtering
+      document.querySelectorAll(".category-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          // Update active button
+          document
+            .querySelectorAll(".category-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          const category = this.dataset.category;
+          const items = document.querySelectorAll(".gallery-item");
+
+          items.forEach((item) => {
+            if (category === "all" || item.dataset.category === category) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Modal handling
+      const projectModal = document.getElementById("projectModal");
+      projectModal.addEventListener("show.bs.modal", function (event) {
+        const button = event.relatedTarget;
+        const title = button.getAttribute("data-title");
+        const description = button.getAttribute("data-description");
+        const image = button.getAttribute("data-image");
+
+        const modalTitle = this.querySelector(".modal-title");
+        const modalImg = this.querySelector(".modal-img");
+        const modalDescription = this.querySelector(".modal-description");
+
+        modalTitle.textContent = title;
+        modalImg.src = image;
+        modalImg.alt = title;
+        modalDescription.textContent = description;
+      });
+    </script>
+  </body>
+</html>

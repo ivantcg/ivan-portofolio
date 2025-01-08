@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio Indra Agustyawan, mahasiswa IT di Universitas PGRI Semarang dengan fokus pada web development."
+    />
+    <title>Portfolio - Home</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Menggunakan flexbox untuk layout utama */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      /* Content mengisi ruang yang tersedia */
+      .content {
+        flex: 1 0 auto;
+      }
+
+      .profile-img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .halo {
+        font-size: 1.2rem;
+        color: #6c757d;
+      }
+
+      .nav-link {
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover {
+        transform: translateY(-2px);
+      }
+
+      .social-links a:hover {
+        color: #0a58ca;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .profile-img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      /* Footer tidak lagi menggunakan positioning */
+      .footer {
+        flex-shrink: 0;
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">MyPortfolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main class="container my-5">
+        <div class="row align-items-center">
+          <div class="col-md-5 text-center mb-4 mb-md-0">
+            <img
+              src="gambar1.jpeg"
+              alt="Foto profil"
+              class="profile-img mb-3"
+            />
+          </div>
+          <div class="col-md-7">
+            <div class="halo mb-3">Halo!</div>
+            <h1 class="display-4">Saya Ivan Fatechah</h1>
+            <p class="lead">Mahasiswa Dari Universitas PGRI Semarang</p>
+            <hr class="my-4" />
+            <p class="fs-4">
+              Saya adalah mahasiswa jurusan Informatika di Universitas PGRI
+              Semarang yang sedang mendalami bidang web development. Saya
+              memiliki minat besar dalam web development, dengan fokus pada
+              pengembangan keterampilan coding dan desain.Selain mendalami web development, disamping itu saya suka
+              kegiatan lainya seperti olahraga dan lain lain
+            </p>
+            <div class="mt-4">
+              <a href="about.html" class="btn btn-primary me-2">Tentang Saya</a>
+              <a href="contact.html" class="btn btn-outline-primary"
+                >Hubungi Saya</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <p class="mb-0">
+            &copy; <span id="currentYear"></span> Portfolio. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

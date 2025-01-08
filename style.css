@@ -1,0 +1,277 @@
+body {
+    font-family: "Audiowide", sans-serif;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  /* Menetapkan gaya dasar untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container utama */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Daftar produk */
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Kartu produk */
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+/* Gambar produk */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Nama produk */
+.product-name {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+/* Deskripsi produk */
+.product-description {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Tombol beli */
+.btn-buy {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover efek pada tombol */
+.btn-buy:hover {
+    background-color: #45a049;
+}
+
+/* Efek hover pada kartu produk */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsif - Menyesuaikan tampilan untuk layar kecil */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+    }
+}
+/* Reset dan pengaturan dasar untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container utama untuk profil produk */
+.product-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian header produk (gambar dan info) */
+.product-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-info {
+    width: 55%;
+    padding-left: 20px;
+}
+
+.product-name {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    font-size: 1.2rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #45a049;
+}
+
+/* Deskripsi produk */
+.product-description {
+    margin-bottom: 30px;
+}
+
+.product-description h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.product-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Fitur produk */
+.product-features {
+    margin-bottom: 30px;
+}
+
+.product-features h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.product-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-features li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Ulasan pengguna */
+.product-reviews h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.review {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.review p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .product-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-info {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .product-name {
+        font-size: 1.8rem;
+    }
+
+    .product-price {
+        font-size: 1.3rem;
+    }
+
+    .product-rating {
+        font-size: 1rem;
+    }
+
+    .btn-buy {
+        font-size: 1rem;
+    }
+}
